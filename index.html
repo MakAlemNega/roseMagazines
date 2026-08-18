@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rose Magazines creates beautifully designed custom magazines, keepsakes, coloring books and printed memories."
+    />
+    <title>Rose Magazines | Stories Made to Keep</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      <span>Made for the moments you never want to forget</span>
+      <span class="announcement-dot">✦</span>
+      <span>Custom magazines & keepsakes</span>
+    </div>
+
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+        <a href="#hero" class="brand" aria-label="Rose Magazines home">
+          <span class="brand-rose">Rose</span>
+          <span class="brand-word">MAGAZINES</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#story">Our Story</a>
+          <a href="#collections">Collections</a>
+          <a href="#custom">Custom</a>
+          <a href="#process">How It Works</a>
+          <a href="#club">Magazine Club</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="icon-button"
+            id="themeToggle"
+            aria-label="Switch to dark mode"
+          >
+            <svg
+              class="sun-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"
+              />
+            </svg>
+            <svg
+              class="moon-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            >
+              <path
+                d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8Z"
+              />
+            </svg>
+          </button>
+
+          <a class="header-order" href="#contact"
+            >Create Yours <span>↗</span></a
+          >
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-top">
+        <span>Rose Magazines</span>
+        <button id="menuClose" aria-label="Close menu">×</button>
+      </div>
+      <nav>
+        <a href="#story">Our Story</a>
+        <a href="#collections">Collections</a>
+        <a href="#custom">Custom Work</a>
+        <a href="#process">How It Works</a>
+        <a href="#club">Magazine Club</a>
+        <a href="#contact" class="mobile-cta">Start a Project ↗</a>
+      </nav>
+    </aside>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="hero-image hero-image-main">
+          <img
+            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1400&q=85"
+            alt="Portrait editorial photograph"
+          />
+          <div class="image-wash"></div>
+        </div>
+
+        <div class="hero-paper hero-paper-one"></div>
+        <div class="hero-paper hero-paper-two"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">ROSE MAGAZINES · EST. 2026</p>
+          <h1>Make your<br /><em>memories</em><br />look iconic.</h1>
+          <p class="hero-copy">
+            Beautifully designed custom magazines made from your photographs,
+            stories, milestones and inside jokes.
+          </p>
+          <div class="hero-actions">
+            <a href="#collections" class="button button-light"
+              >Explore the collection <span>↗</span></a
+            >
+            <a href="#custom" class="text-link light-link"
+              >Tell us your idea <span>→</span></a
+            >
+          </div>
+        </div>
+
+        <div class="hero-stamp">
+          SPECIAL<br />EDITION<br /><strong>ROSE</strong>
+        </div>
+
+        <div class="hero-bottom">
+          <span>Issue No. 01</span>
+          <span>Stories · People · Places · Moments</span>
+          <span>Scroll to explore ↓</span>
+        </div>
+      </section>
+
+      <!-- EDITORIAL INTRO -->
+      <section class="intro section-paper" id="story">
+        <div class="section-number">01</div>
+        <div class="intro-grid">
+          <div class="intro-heading reveal">
+            <span class="eyebrow dark">THE ROSE EDIT</span>
+            <h2>
+              A keepsake should feel<br /><em>like something you found.</em>
+            </h2>
+          </div>
+          <div class="intro-copy reveal">
+            <p class="large-copy">
+              We turn real moments into the kind of printed objects people keep
+              on their coffee tables, tuck into drawers and rediscover years
+              later.
+            </p>
+            <p>
+              From birthdays and weddings to friendship trips, graduations and
+              everyday love stories, every Rose Magazine is designed around the
+              personality of the person receiving it.
+            </p>
+            <a href="#process" class="text-link dark-link"
+              >How we make it <span>→</span></a
+            >
+          </div>
+        </div>
+
+        <div class="editorial-note">
+          PRINTED WITH INTENTION · MADE TO BE KEPT
+        </div>
+      </section>
+
+      <!-- FEATURED VISUAL -->
+      <section class="feature-spread">
+        <div class="feature-photo reveal">
+          <img
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=85"
+            alt="Friends celebrating together"
+          />
+          <span class="photo-caption"
+            >A page for the people who made the year worth remembering.</span
+          >
+        </div>
+        <div class="feature-copy reveal">
+          <span class="eyebrow dark">FROM THE ARCHIVE</span>
+          <div class="giant-mark">R</div>
+          <h2>There is no<br />ordinary story.</h2>
+          <p>
+            Our layouts borrow from fashion editorials, independent magazines
+            and old family albums. The result is personal, imperfect and
+            unmistakably yours.
+          </p>
+          <a href="#custom" class="button button-dark"
+            >Create a custom issue <span>↗</span></a
+          >
+        </div>
+      </section>
+
+      <!-- COLLECTIONS -->
+      <section class="collections section-red" id="collections">
+        <div class="section-shell">
+          <div class="section-heading-row reveal">
+            <div>
+              <span class="eyebrow light">THE COLLECTION</span>
+              <h2>Choose your<br /><em>edition.</em></h2>
+            </div>
+            <p>Start with one of our signature formats, then make it yours.</p>
+          </div>
+
+          <div
+            class="collection-tabs"
+            role="tablist"
+            aria-label="Product categories"
+          >
+            <button class="tab active" data-filter="all">All</button>
+            <button class="tab" data-filter="magazine">Magazines</button>
+            <button class="tab" data-filter="keepsake">Keepsakes</button>
+            <button class="tab" data-filter="play">Games & Play</button>
+          </div>
+
+          <div class="product-editorial-grid" id="productGrid">
+            <article
+              class="editorial-card reveal"
+              data-category="magazine"
+              data-product="Birthday Magazine"
+            >
+              <button
+                class="card-image"
+                data-preview="Birthday Magazine"
+                aria-label="Preview Birthday Magazine"
+              >
+                <div class="cover cover-birthday">
+                  <span class="cover-small">THE</span>
+                  <strong>BIRTHDAY</strong>
+                  <span class="cover-script">issue</span>
+                  <i>★</i>
+                  <small>THE PEOPLE · THE STORIES · THE YEARS</small>
+                </div>
+                <span class="card-hover">Quick look ↗</span>
+              </button>
+              <div class="card-meta">
+                <span>01 / MAGAZINE</span>
+                <span>From $49</span>
+              </div>
+              <h3>Birthday Edition</h3>
+              <p>
+                A cover-worthy celebration filled with photographs, messages and
+                the little things that make them who they are.
+              </p>
+              <a href="#contact" class="card-link">Order this edition →</a>
+            </article>
+
+            <article
+              class="editorial-card editorial-card-offset reveal"
+              data-category="magazine"
+              data-product="Wedding Magazine"
+            >
+              <button
+                class="card-image"
+                data-preview="Wedding Magazine"
+                aria-label="Preview Wedding Magazine"
+              >
+                <div class="cover cover-wedding">
+                  <span>THE</span>
+                  <strong>WEDDING</strong>
+                  <em>journal</em>
+                  <small>LOVE / 2026 / FOREVER</small>
+                </div>
+                <span class="card-hover">Quick look ↗</span>
+              </button>
+              <div class="card-meta">
+                <span>02 / MAGAZINE</span>
+                <span>From $79</span>
+              </div>
+              <h3>Wedding Edition</h3>
+              <p>
+                A modern wedding keepsake for vows, photographs, family notes,
+                favorite details and the whole story.
+              </p>
+              <a href="#contact" class="card-link">Order this edition →</a>
+            </article>
+
+            <article
+              class="editorial-card reveal"
+              data-category="keepsake"
+              data-product="Custom Newspaper"
+            >
+              <button
+                class="card-image"
+                data-preview="Custom Newspaper"
+                aria-label="Preview Custom Newspaper"
+              >
+                <div class="newspaper-cover">
+                  <span class="paper-masthead">THE ROSE DAILY</span>
+                  <strong>THE DAY<br />EVERYTHING<br />CHANGED</strong>
+                  <div class="paper-lines"></div>
+                  <small>YOUR PHOTOS · YOUR HEADLINES · YOUR STORY</small>
+                </div>
+                <span class="card-hover">Quick look ↗</span>
+              </button>
+              <div class="card-meta">
+                <span>03 / KEEPSAKE</span>
+                <span>From $55</span>
+              </div>
+              <h3>Custom Newspaper</h3>
+              <p>
+                Turn a milestone into a front page. Perfect for shoots,
+                birthdays, announcements and unforgettable gifts.
+              </p>
+              <a href="#contact" class="card-link">Make a newspaper →</a>
+            </article>
+
+            <article
+              class="editorial-card editorial-card-wide reveal"
+              data-category="keepsake"
+              data-product="Memory Calendar"
+            >
+              <button
+                class="card-image"
+                data-preview="Memory Calendar"
+                aria-label="Preview Memory Calendar"
+              >
+                <div class="calendar-cover">
+                  <div class="calendar-photo"></div>
+                  <span>2026</span>
+                  <strong>OUR<br />YEAR</strong>
+                  <small>12 MONTHS · 12 MEMORIES</small>
+                </div>
+                <span class="card-hover">Quick look ↗</span>
+              </button>
+              <div class="card-meta">
+                <span>04 / KEEPSAKE</span>
+                <span>From $65</span>
+              </div>
+              <h3>Memory Calendar</h3>
+              <p>
+                One year, twelve chapters. Add your favorite photographs,
+                important dates and tiny notes to every month.
+              </p>
+              <a href="#contact" class="card-link">Create a calendar →</a>
+            </article>
+
+            <article
+              class="editorial-card reveal"
+              data-category="play"
+              data-product="Sip & Color"
+            >
+              <button
+                class="card-image"
+                data-preview="Sip & Color"
+                aria-label="Preview Sip and Color"
+              >
+                <div class="cover cover-color">
+                  <span>SIP</span>
+                  <strong>&</strong>
+                  <span>COLOR</span>
+                  <i>an illustrated night in</i>
+                  <small>FRIENDS · WINE · DRAWING · LAUGHTER</small>
+                </div>
+                <span class="card-hover">Quick look ↗</span>
+              </button>
+              <div class="card-meta">
+                <span>05 / PLAY</span>
+                <span>From $35</span>
+              </div>
+              <h3>Sip & Color</h3>
+              <p>
+                A personalized coloring book built around your people, your
+                references and your kind of fun.
+              </p>
+              <a href="#contact" class="card-link">Order this edition →</a>
+            </article>
+
+            <article
+              class="editorial-card editorial-card-offset reveal"
+              data-category="play"
+              data-product="Puzzle Book"
+            >
+              <button
+                class="card-image"
+                data-preview="Puzzle Book"
+                aria-label="Preview Puzzle Book"
+              >
+                <div class="puzzle-cover">
+                  <span>ROSE</span>
+                  <strong>PUZZLE<br />CLUB</strong>
+                  <div class="mini-grid">4 8 1<br />7 · 3<br />2 6 9</div>
+                  <small>PUZZLES FOR SLOW AFTERNOONS</small>
+                </div>
+                <span class="card-hover">Quick look ↗</span>
+              </button>
+              <div class="card-meta">
+                <span>06 / PLAY</span>
+                <span>From $22</span>
+              </div>
+              <h3>Rose Puzzle Club</h3>
+              <p>
+                Sudoku and word-search editions for quiet mornings, long
+                journeys and anyone who likes a good challenge.
+              </p>
+              <a href="#contact" class="card-link">Explore puzzles →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CUSTOM -->
+      <section class="custom section-paper" id="custom">
+        <div class="section-shell">
+          <div class="custom-grid">
+            <div class="custom-copy reveal">
+              <span class="eyebrow dark">THE CUSTOM DESK</span>
+              <h2>Your story.<br /><em>Your cover.</em></h2>
+              <p class="large-copy">
+                Have an idea that doesn't fit a template? Good. Those are our
+                favorite projects.
+              </p>
+              <p>
+                Tell us what you're celebrating, send your photographs and
+                references, and we'll turn the raw material into an editorial
+                keepsake with a point of view.
+              </p>
+              <a href="#contact" class="button button-dark"
+                >Start your custom issue <span>↗</span></a
+              >
+            </div>
+
+            <div class="custom-art reveal">
+              <div class="floating-label label-one">YOUR PHOTOS</div>
+              <div class="floating-label label-two">YOUR WORDS</div>
+              <div class="floating-label label-three">YOUR STORY</div>
+
+              <div class="magazine-stack">
+                <div class="stack-sheet sheet-back"></div>
+                <div class="stack-sheet sheet-middle"></div>
+                <div class="stack-cover">
+                  <span>ROSE</span>
+                  <strong>THIS IS<br />YOUR<br />ISSUE</strong>
+                  <em>Volume 01</em>
+                  <small>MADE FROM MEMORIES</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="process section-cream" id="process">
+        <div class="section-shell">
+          <div class="section-heading-row reveal">
+            <div>
+              <span class="eyebrow dark">THE PROCESS</span>
+              <h2>From camera roll<br />to <em>coffee table.</em></h2>
+            </div>
+            <p>Simple enough to enjoy. Detailed enough to feel special.</p>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-item reveal">
+              <span>01</span>
+              <h3>Send the memories</h3>
+              <p>
+                Choose your format and share your photographs, names, dates,
+                messages and references with us.
+              </p>
+            </article>
+            <article class="process-item reveal">
+              <span>02</span>
+              <h3>We design the story</h3>
+              <p>
+                Our design process turns your material into an editorial layout
+                with a consistent visual point of view.
+              </p>
+            </article>
+            <article class="process-item reveal">
+              <span>03</span>
+              <h3>Approve the proof</h3>
+              <p>
+                You receive a digital proof to review before anything goes to
+                print. We refine the details together.
+              </p>
+            </article>
+            <article class="process-item reveal">
+              <span>04</span>
+              <h3>Hold the finished issue</h3>
+              <p>
+                We print, finish and deliver your piece, ready to be gifted,
+                displayed or kept for years.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLUB -->
+      <section class="club section-red" id="club">
+        <div class="section-shell">
+          <div class="club-layout">
+            <div class="club-copy reveal">
+              <span class="eyebrow light">THE ROSE MAGAZINE CLUB</span>
+              <h2>A little beauty<br />in your mailbox.</h2>
+              <p>
+                Join our list for new templates, limited editions, creative
+                prompts and occasional little surprises.
+              </p>
+              <form class="club-form" id="newsletterForm" novalidate>
+                <label class="sr-only" for="newsletterEmail"
+                  >Email address</label
+                >
+                <input
+                  id="newsletterEmail"
+                  type="email"
+                  placeholder="your@email.com"
+                  required
+                />
+                <button type="submit">Join the club ↗</button>
+              </form>
+              <p
+                class="form-message"
+                id="newsletterMessage"
+                aria-live="polite"
+              ></p>
+            </div>
+
+            <div class="club-covers reveal" aria-hidden="true">
+              <div class="club-cover club-cover-one">
+                ROSE<br /><strong>SUMMER<br />ISSUE</strong>
+              </div>
+              <div class="club-cover club-cover-two">
+                THE<br /><strong>MEMORY<br />EDIT</strong>
+              </div>
+              <div class="club-cover club-cover-three">
+                2026<br /><strong>YOUR<br />YEAR</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="reviews section-paper" id="reviews">
+        <div class="section-shell">
+          <div class="reviews-head reveal">
+            <span class="eyebrow dark">LOVE NOTES</span>
+            <h2>Made to make<br />people <em>feel something.</em></h2>
+          </div>
+
+          <div class="review-grid">
+            <blockquote class="review reveal">
+              <span class="quote-mark">“</span>
+              <p>
+                The birthday magazine felt like discovering an old issue of a
+                beautiful publication, except every page was about my mum.
+              </p>
+              <footer>Amara T. · Birthday Edition</footer>
+            </blockquote>
+            <blockquote class="review review-featured reveal">
+              <span class="quote-mark">“</span>
+              <p>
+                It was the one gift at our engagement party that everyone
+                stopped to look through.
+              </p>
+              <footer>Lena & Marcus · Custom Newspaper</footer>
+            </blockquote>
+            <blockquote class="review reveal">
+              <span class="quote-mark">“</span>
+              <p>
+                It doesn't look like a template. It looks like something that
+                belongs to us.
+              </p>
+              <footer>Jasmine O. · Custom Magazine</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="final-cta" id="contact">
+        <div class="final-cta-image">
+          <img
+            src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=1400&q=85"
+            alt="Friends spending time together"
+          />
+        </div>
+        <div class="final-cta-overlay"></div>
+        <div class="final-cta-content reveal">
+          <span class="eyebrow light">LET'S MAKE SOMETHING WORTH KEEPING</span>
+          <h2>What would your<br /><em>cover story</em> be?</h2>
+          <p>
+            Tell us the occasion, the people and the feeling. We'll take it from
+            there.
+          </p>
+          <a href="#enquiry" class="button button-light"
+            >Start your project <span>↗</span></a
+          >
+        </div>
+      </section>
+
+      <!-- ENQUIRY -->
+      <section class="enquiry section-cream" id="enquiry">
+        <div class="section-shell enquiry-grid">
+          <div class="enquiry-intro reveal">
+            <span class="eyebrow dark">THE EDITOR'S DESK</span>
+            <h2>Let's make<br /><em>your issue.</em></h2>
+            <p>
+              Share a few details and we'll get back to you with the best format
+              for your story and a personalized quote.
+            </p>
+            <div class="contact-note">
+              <span>✦</span>
+              <p>Typical reply time: within 24 hours.</p>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-row">
+              <label>
+                <span>Your name</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Jane Smith"
+                  required
+                  autocomplete="name"
+                />
+              </label>
+              <label>
+                <span>Email address</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="jane@example.com"
+                  required
+                  autocomplete="email"
+                />
+              </label>
+            </div>
+
+            <label>
+              <span>What are you making?</span>
+              <select name="product" required>
+                <option value="" selected disabled>Choose an edition...</option>
+                <option>Birthday Magazine</option>
+                <option>Anniversary Magazine</option>
+                <option>Wedding Magazine</option>
+                <option>Custom Magazine</option>
+                <option>Custom Newspaper</option>
+                <option>Memory Calendar</option>
+                <option>Coloring Book</option>
+                <option>Puzzle Book</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Tell us about it</span>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="The occasion, the date, the number of people, the feeling you want..."
+              ></textarea>
+            </label>
+
+            <button class="button button-dark submit-button" type="submit">
+              <span>Send enquiry</span><span>↗</span>
+            </button>
+            <p class="form-message" id="formMessage" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top section-shell">
+        <div class="footer-brand">
+          <a href="#hero" class="brand">
+            <span class="brand-rose">Rose</span>
+            <span class="brand-word">MAGAZINES</span>
+          </a>
+          <p>
+            Custom printed stories for the people, places and moments worth
+            remembering.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <span>Explore</span>
+          <a href="#collections">Collections</a>
+          <a href="#custom">Custom Work</a>
+          <a href="#process">How It Works</a>
+          <a href="#club">Magazine Club</a>
+        </div>
+
+        <div class="footer-column">
+          <span>Say hello</span>
+          <a href="mailto:hello@rose-magazines.com">hello@rose-magazines.com</a>
+          <a href="#contact">Start a project</a>
+          <a href="#reviews">Client stories</a>
+        </div>
+
+        <div class="footer-column">
+          <span>Follow the edit</span>
+          <a href="#" aria-label="Instagram">Instagram ↗</a>
+          <a href="#" aria-label="Pinterest">Pinterest ↗</a>
+          <a href="#" aria-label="TikTok">TikTok ↗</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom section-shell">
+        <span>© <span id="currentYear"></span> Rose Magazines</span>
+        <span>Printed with intention.</span>
+        <button id="backToTop" aria-label="Back to top">↑</button>
+      </div>
+    </footer>
+
+    <!-- QUICK LOOK MODAL -->
+    <div class="modal" id="previewModal" aria-hidden="true">
+      <div class="modal-overlay" data-close-modal></div>
+      <div
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <button class="modal-close" id="modalClose" aria-label="Close preview">
+          ×
+        </button>
+        <div class="modal-cover" id="modalCover"></div>
+        <div class="modal-info">
+          <span class="eyebrow dark">QUICK LOOK</span>
+          <h2 id="modalTitle">Product</h2>
+          <p id="modalDescription">A Rose Magazines edition made to be kept.</p>
+          <a href="#contact" class="button button-dark" id="modalOrder"
+            >Start this project <span>↗</span></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
