@@ -12,7 +12,7 @@ export default function TemplateCard({ template }) {
         />
 
         <div className="template-overlay">
-          <span>Use this template</span>
+          <span>Explore this book</span>
         </div>
 
         <span className="template-issue">{template.issue}</span>
