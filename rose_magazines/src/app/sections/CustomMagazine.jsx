@@ -17,7 +17,7 @@ export default function CustomMagazine() {
 
           <div className="custom-image-small">
             <Image
-              src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=85"
+              src="/images/customMagazines/Custom_Mag_Small02.avif"
               alt="Magazine detail"
               fill
               sizes="220px"
@@ -41,10 +41,9 @@ export default function CustomMagazine() {
           </h2>
 
           <p className="custom-description">
-            Birthdays, weddings, travels, friendships, family,
-            milestones, or simply a year worth remembering.
-            Bring us your memories and we'll turn them into a
-            magazine that feels completely yours.
+            Birthdays, weddings, travels, friendships, family, milestones, or
+            simply a year worth remembering. Bring us your memories and we'll
+            turn them into a magazine that feels completely yours.
           </p>
 
           <div className="custom-features">

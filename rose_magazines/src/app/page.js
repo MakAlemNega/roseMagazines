@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import MemoryKeeping from "./sections/MemoryKeeping";
 import CustomMagazine from "./sections/CustomMagazine";
-import MagazineTemplates from "./sections/MagazineTemplates";
+import MagazineTemplates from "./sections/ColoringBooks";
 import MagazineClub from "./sections/MagazineClub";
 import Testimonials from "./sections/Testimonials";
 import Socials from "./sections/Socials";

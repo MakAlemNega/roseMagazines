@@ -1,50 +1,50 @@
 import Link from "next/link";
-import { templates } from "../data/templates";
+import { coloringBooks } from "../data/coloringBooks";
 import TemplateCard from "../components/TemplateCard";
 
-export default function MagazineTemplates() {
+export default function ColoringBooks() {
   return (
-    <section className="templates-section" id="templates">
+    <section className="templates-section" id="coloring-books">
       <div className="container">
         <div className="templates-header">
           <div>
-            <p className="eyebrow">Magazine Templates</p>
+            <p className="eyebrow">Coloring Books</p>
 
             <h2>
-              A story for
+              Stories waiting
               <br />
-              <em>every moment.</em>
+              <em>for your colors.</em>
             </h2>
           </div>
 
           <div className="templates-intro">
             <p>
-              Start with one of our thoughtfully designed templates, then make
-              it completely yours.
+              Explore beautifully designed coloring books made for creativity,
+              quiet moments, and bringing every page to life.
             </p>
 
             <Link href="#contact" className="text-link">
-              Need something custom
+              Looking for something custom
               <span>↗</span>
             </Link>
           </div>
         </div>
 
         <div className="templates-grid">
-          {templates.map((template) => (
-            <TemplateCard key={template.id} template={template} />
+          {coloringBooks.map((book) => (
+            <TemplateCard key={book.id} template={book} />
           ))}
         </div>
 
         <div className="templates-footer">
-          <span>05 templates</span>
+          <span>05 coloring books</span>
 
           <Link href="#contact" className="templates-view-all">
-            View all templates
+            Explore all books
             <span>→</span>
           </Link>
 
-          <span>Choose your story</span>
+          <span>Pick your favorite</span>
         </div>
       </div>
     </section>
