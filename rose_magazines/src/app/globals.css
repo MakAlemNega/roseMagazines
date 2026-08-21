@@ -1006,6 +1006,13 @@ img {
   transform: scale(1.06);
 }
 
+.custom-magazine-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 /* ---------------------------------------------------------
    Stamp
    --------------------------------------------------------- */

@@ -7,11 +7,15 @@ export default function CustomMagazine() {
       <div className="container custom-layout">
         <div className="custom-visual">
           <div className="custom-image-main">
-            <Image
-              src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&w=1200&q=85"
-              alt="Open magazine displaying memories"
-              fill
-              sizes="(max-width: 900px) 90vw, 55vw"
+            <video
+              className="custom-magazine-video"
+              src="/videos/Custom_Mag_Big01.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Custom magazine preview"
             />
           </div>
 
