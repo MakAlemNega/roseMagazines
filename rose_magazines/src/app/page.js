@@ -2,7 +2,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import MemoryKeeping from "./sections/MemoryKeeping";
 import CustomMagazine from "./sections/CustomMagazine";
-import MagazineTemplates from "./sections/ColoringBooks";
+import ColoringBooks from "./sections/ColoringBooks";
+import SudokuBooks from "./components/SudokuBooks";
 import MagazineClub from "./sections/MagazineClub";
 import Testimonials from "./sections/Testimonials";
 import Socials from "./sections/Socials";
@@ -19,7 +20,8 @@ export default function Home() {
         <Hero />
         <MemoryKeeping />
         <CustomMagazine />
-        <MagazineTemplates />
+        <ColoringBooks />
+        <SudokuBooks />
         <MagazineClub />
         <Testimonials />
         <Socials />

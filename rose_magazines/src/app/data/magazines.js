@@ -3,7 +3,6 @@ export const magazines = [
     id: 1,
     title: "Birthday Magazines",
     category: "Birthday Collection",
-    price: "$24",
     image: "/images/memoryKeeping/Birthday_Mag01.avif",
     description:
       "Capture the joy, laughter, and special moments of a birthday in a keepsake made to be treasured for years to come.",
@@ -13,7 +12,6 @@ export const magazines = [
     id: 2,
     title: "Friendship Magazines",
     category: "Friendship Collection",
-    price: "$22",
     image: "/images/memoryKeeping/Friendship_Mag01.avif",
     description:
       "Celebrate the people, adventures, inside jokes, and unforgettable moments that make a friendship truly special.",
@@ -23,7 +21,6 @@ export const magazines = [
     id: 3,
     title: "Travel Magazines",
     category: "Travel Collection",
-    price: "$28",
     image: "/images/memoryKeeping/Travel_Mag01.avif",
     description:
       "Preserve the places you've discovered, the adventures you've shared, and the memories that made every journey unforgettable.",
@@ -33,7 +30,6 @@ export const magazines = [
     id: 4,
     title: "Wedding Magazines",
     category: "Wedding Collection",
-    price: "$26",
     image: "/images/memoryKeeping/Wedding_Mag01.avif",
     description:
       "Tell the story of your special day through the moments, details, and memories that made your wedding uniquely yours.",

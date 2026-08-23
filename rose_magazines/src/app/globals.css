@@ -667,7 +667,6 @@ img {
 
 .memory-section {
   padding-block: 120px;
-
   background: var(--cream);
 }
 
@@ -675,22 +674,24 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-
   align-items: end;
-
   margin-bottom: 60px;
 }
 
 .section-title em {
   color: var(--rose);
-
   font-style: italic;
 }
 
 .section-heading-row .section-description {
+  max-width: 480px;
   margin-left: auto;
   margin-bottom: 4px;
 }
+
+/* ---------------------------------------------------------
+   Magazine Grid
+   --------------------------------------------------------- */
 
 .magazine-grid {
   display: grid;
@@ -698,27 +699,31 @@ img {
   gap: 18px;
 }
 
+/* ---------------------------------------------------------
+   Magazine Card
+   --------------------------------------------------------- */
+
 .magazine-card {
   min-width: 0;
 }
 
 .magazine-card-image {
   position: relative;
-
   aspect-ratio: 0.72;
-
   overflow: hidden;
-
   background: var(--paper);
 }
 
 .magazine-card-image img {
   object-fit: cover;
-
   transition:
     transform 700ms var(--ease),
     filter 500ms ease;
 }
+
+/* ---------------------------------------------------------
+   Card Overlay
+   --------------------------------------------------------- */
 
 .magazine-card-overlay {
   position: absolute;
@@ -727,15 +732,20 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
 
   background: rgba(125, 41, 69, 0.35);
 
   opacity: 0;
-
-  transition: opacity 350ms ease;
+  transition:
+    opacity 350ms ease,
+    backdrop-filter 350ms ease;
 }
 
 .magazine-card-overlay span {
+  display: inline-flex;
+  align-items: center;
+
   padding: 12px 18px;
 
   border: 1px solid rgba(255, 255, 255, 0.7);
@@ -744,24 +754,34 @@ img {
   color: var(--white);
 
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
+/* ---------------------------------------------------------
+   Card Hover
+   --------------------------------------------------------- */
+
 .magazine-card:hover .magazine-card-image img {
   transform: scale(1.045);
+  filter: saturate(1.05);
 }
 
 .magazine-card:hover .magazine-card-overlay {
   opacity: 1;
 }
 
+/* ---------------------------------------------------------
+   Card Information
+   --------------------------------------------------------- */
+
 .magazine-card-info {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+
   gap: 20px;
 
   padding-top: 16px;
@@ -773,7 +793,6 @@ img {
   color: var(--rose-dark);
 
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.13em;
@@ -790,15 +809,40 @@ img {
   line-height: 1.15;
 }
 
-.magazine-card-price {
+/* ---------------------------------------------------------
+   Magazine Number
+   --------------------------------------------------------- */
+
+.magazine-card-number {
   flex-shrink: 0;
 
   color: var(--muted);
 
   font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 0.72rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
+
+/* ---------------------------------------------------------
+   Magazine Description
+   --------------------------------------------------------- */
+
+.magazine-card-description {
+  max-width: 300px;
+
+  margin: 12px 0 0;
+
+  color: var(--muted);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------------
+   Section Footer
+   --------------------------------------------------------- */
 
 .memory-section-footer {
   display: flex;
@@ -812,14 +856,20 @@ img {
 }
 
 .memory-section-footer p {
+  max-width: 420px;
+
   margin: 0;
 
   color: var(--muted);
 
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.75rem;
+  line-height: 1.5;
 }
+
+/* ---------------------------------------------------------
+   Text Links
+   --------------------------------------------------------- */
 
 .text-link {
   display: inline-flex;
@@ -829,11 +879,12 @@ img {
   color: var(--rose-dark);
 
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
+  transition: color 200ms ease;
 }
 
 .text-link span {
@@ -842,13 +893,17 @@ img {
   transition: transform 200ms ease;
 }
 
+.text-link:hover {
+  color: var(--rose);
+}
+
 .text-link:hover span {
   transform: translate(3px, -3px);
 }
 
-/* ---------------------------------------------------------
+/* =========================================================
    Responsive
-   --------------------------------------------------------- */
+   ========================================================= */
 
 @media (max-width: 900px) {
   .memory-section {
@@ -857,7 +912,6 @@ img {
 
   .section-heading-row {
     grid-template-columns: 1fr;
-
     gap: 20px;
   }
 
@@ -882,11 +936,11 @@ img {
     overflow-x: auto;
 
     margin-right: calc(var(--page-padding) * -1);
+
     padding-right: var(--page-padding);
     padding-bottom: 15px;
 
     scroll-snap-type: x mandatory;
-
     scrollbar-width: none;
   }
 
@@ -896,7 +950,6 @@ img {
 
   .magazine-card {
     flex: 0 0 72vw;
-
     scroll-snap-align: start;
   }
 
@@ -904,6 +957,10 @@ img {
     align-items: flex-start;
     flex-direction: column;
     gap: 20px;
+  }
+
+  .magazine-card-description {
+    max-width: 90%;
   }
 }
 
@@ -1213,12 +1270,11 @@ img {
 }
 
 /* =========================================================
-   Magazine Templates
+   Coloring Books
    ========================================================= */
 
-.templates-section {
+.coloring-books-section {
   padding-block: 130px;
-
   background: var(--cream);
   color: var(--ink);
 }
@@ -1227,85 +1283,86 @@ img {
    Header
    --------------------------------------------------------- */
 
-.templates-header {
+.coloring-books-header {
   display: grid;
   grid-template-columns: 1fr 0.65fr;
   gap: 80px;
-
   align-items: end;
-
   margin-bottom: 65px;
 }
 
-.templates-header h2 {
+.coloring-books-header h2 {
   margin: 0;
-
   font-size: clamp(4rem, 7vw, 7rem);
   font-weight: 400;
   line-height: 0.86;
   letter-spacing: -0.055em;
 }
 
-.templates-header h2 em {
+.coloring-books-header h2 em {
   color: var(--rose);
-
   font-style: italic;
 }
 
-.templates-intro {
+.coloring-books-intro {
   max-width: 390px;
-
   margin-left: auto;
 }
 
-.templates-intro p {
+.coloring-books-intro p {
   margin: 0 0 25px;
-
   color: var(--muted);
-
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.88rem;
   line-height: 1.8;
 }
 
 /* ---------------------------------------------------------
-   Template grid
+   Coloring Book Grid
    --------------------------------------------------------- */
 
-.templates-grid {
+.coloring-books-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
 }
 
-.template-card {
+/* ---------------------------------------------------------
+   Coloring Book Card
+   --------------------------------------------------------- */
+
+.coloring-book-card {
   min-width: 0;
 }
 
-.template-image {
+/* ---------------------------------------------------------
+   Coloring Book Image
+   --------------------------------------------------------- */
+
+.coloring-book-image {
   position: relative;
-
   aspect-ratio: 0.68;
-
   overflow: hidden;
-
   background: var(--paper);
 }
 
-.template-image img {
+.coloring-book-image img {
   object-fit: cover;
-
   transition:
     transform 700ms var(--ease),
     filter 500ms ease;
 }
 
-.template-card:hover .template-image img {
+.coloring-book-card:hover .coloring-book-image img {
   transform: scale(1.05);
+  filter: saturate(1.04);
 }
 
-.template-issue {
+/* ---------------------------------------------------------
+   Issue Label
+   --------------------------------------------------------- */
+
+.coloring-book-issue {
   position: absolute;
   top: 12px;
   left: 12px;
@@ -1317,53 +1374,61 @@ img {
   color: var(--rose-dark);
 
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.5rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.template-overlay {
+/* ---------------------------------------------------------
+   Overlay
+   --------------------------------------------------------- */
+
+.coloring-book-overlay {
   position: absolute;
   inset: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
 
   background: rgba(94, 25, 49, 0.42);
 
   opacity: 0;
 
-  transition: opacity 300ms ease;
+  transition:
+    opacity 300ms ease,
+    backdrop-filter 300ms ease;
 }
 
-.template-overlay span {
+.coloring-book-overlay span {
+  display: inline-flex;
+  align-items: center;
+
   padding: 11px 15px;
 
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 999px;
 
-  color: white;
+  color: var(--white);
 
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.template-card:hover .template-overlay {
+.coloring-book-card:hover .coloring-book-overlay {
   opacity: 1;
 }
 
 /* ---------------------------------------------------------
-   Template information
+   Coloring Book Information
    --------------------------------------------------------- */
 
-.template-info {
+.coloring-book-info {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -1373,20 +1438,19 @@ img {
   padding-top: 13px;
 }
 
-.template-info p {
+.coloring-book-info p {
   margin: 0 0 5px;
 
   color: var(--rose-dark);
 
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.52rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.template-info h3 {
+.coloring-book-info h3 {
   margin: 0;
 
   color: var(--ink);
@@ -1396,7 +1460,11 @@ img {
   line-height: 1.15;
 }
 
-.template-arrow {
+/* ---------------------------------------------------------
+   Arrow
+   --------------------------------------------------------- */
+
+.coloring-book-arrow {
   color: var(--rose);
 
   font-size: 1rem;
@@ -1406,9 +1474,8 @@ img {
     color 200ms ease;
 }
 
-.template-card:hover .template-arrow {
+.coloring-book-card:hover .coloring-book-arrow {
   color: var(--rose-dark);
-
   transform: translate(3px, -3px);
 }
 
@@ -1416,9 +1483,10 @@ img {
    Footer
    --------------------------------------------------------- */
 
-.templates-footer {
+.coloring-books-footer {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
+
   align-items: center;
 
   margin-top: 55px;
@@ -1429,164 +1497,592 @@ img {
   color: var(--muted);
 
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.13em;
-
   text-transform: uppercase;
 }
 
-.templates-footer > :last-child {
+.coloring-books-footer > :last-child {
   justify-self: end;
 }
 
-.templates-view-all {
+/* ---------------------------------------------------------
+   View All Link
+   --------------------------------------------------------- */
+
+.coloring-books-view-all {
   display: inline-flex;
   align-items: center;
+
   gap: 15px;
 
   color: var(--rose-dark);
 
-  transition: gap 250ms ease;
+  transition:
+    gap 250ms ease,
+    color 200ms ease;
 }
 
-.templates-view-all span {
+.coloring-books-view-all span {
   font-size: 1rem;
 }
 
-.templates-view-all:hover {
+.coloring-books-view-all:hover {
   gap: 20px;
+  color: var(--rose);
 }
 
-/* ---------------------------------------------------------
+/* =========================================================
    Tablet
-   --------------------------------------------------------- */
+   ========================================================= */
 
 @media (max-width: 1000px) {
-  .templates-section {
+  .coloring-books-section {
     padding-block: 100px;
   }
 
-  .templates-header {
+  .coloring-books-header {
     grid-template-columns: 1fr 0.8fr;
-
     gap: 40px;
   }
 
-  .templates-grid {
+  .coloring-books-grid {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 35px;
   }
 
-  .template-card:nth-child(4),
-  .template-card:nth-child(5) {
-    display: none;
+  @media (max-width: 1000px) {
+    .coloring-books-section {
+      padding-block: 100px;
+    }
+
+    .coloring-books-header {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .coloring-books-intro {
+      margin-left: 0;
+      max-width: 500px;
+    }
+
+    .coloring-books-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 35px;
+    }
   }
 }
 
-/* ---------------------------------------------------------
+/* =========================================================
    Mobile
-   --------------------------------------------------------- */
+   ========================================================= */
 
 @media (max-width: 650px) {
-  .templates-section {
+  .coloring-books-section {
     padding-block: 75px;
   }
 
-  .templates-header {
+  .coloring-books-header {
     grid-template-columns: 1fr;
-
     gap: 25px;
-
     margin-bottom: 40px;
   }
 
-  .templates-header h2 {
+  .coloring-books-header h2 {
     font-size: clamp(3.5rem, 16vw, 5.5rem);
   }
 
-  .templates-intro {
+  .coloring-books-intro {
     margin-left: 0;
   }
 
-  .templates-grid {
+  .coloring-books-grid {
     display: flex;
 
     overflow-x: auto;
 
     margin-right: calc(var(--page-padding) * -1);
+
     padding-right: var(--page-padding);
     padding-bottom: 15px;
 
     gap: 12px;
 
     scroll-snap-type: x mandatory;
-
     scrollbar-width: none;
   }
 
-  .templates-grid::-webkit-scrollbar {
+  .coloring-books-grid::-webkit-scrollbar {
     display: none;
   }
 
-  .template-card {
+  .coloring-book-card {
     flex: 0 0 70vw;
-
     scroll-snap-align: start;
   }
 
-  .templates-footer {
+  .coloring-books-footer {
     grid-template-columns: 1fr auto;
     gap: 20px;
   }
 
-  .templates-footer > :last-child {
+  .coloring-books-footer > :last-child {
     display: none;
   }
 }
 
 /* =========================================================
+   Sudoku Books
+   ========================================================= */
+
+.sudoku-section {
+  position: relative;
+  padding-block: 140px;
+  background: var(--cream);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+.sudoku-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+/* ---------------------------------------------------------
+   Visual
+   --------------------------------------------------------- */
+
+.sudoku-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 620px;
+}
+
+.sudoku-card-back {
+  position: absolute;
+  width: 58%;
+  aspect-ratio: 0.7;
+  background: #ead0d7;
+  transform: translate(40px, -20px) rotate(7deg);
+  box-shadow: 15px 20px 50px rgba(94, 25, 49, 0.1);
+}
+
+.sudoku-card-back span {
+  display: block;
+  margin-left: 24px;
+  color: rgba(94, 25, 49, 0.4);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sudoku-card-back span:first-child {
+  margin-top: 24px;
+}
+
+/* ---------------------------------------------------------
+   Main Book
+   --------------------------------------------------------- */
+
+.sudoku-card {
+  position: relative;
+  z-index: 2;
+  width: 58%;
+  aspect-ratio: 0.7;
+  background: var(--paper);
+
+  box-shadow: 25px 30px 70px rgba(94, 25, 49, 0.18);
+
+  transform: rotate(-4deg);
+
+  transition:
+    transform 600ms var(--ease),
+    box-shadow 600ms var(--ease);
+}
+
+.sudoku-visual:hover .sudoku-card {
+  transform: rotate(0deg) translateY(-8px);
+  box-shadow: 25px 40px 80px rgba(94, 25, 49, 0.23);
+}
+
+.sudoku-card-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.sudoku-card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(94, 25, 49, 0.05),
+    rgba(94, 25, 49, 0.68)
+  );
+}
+
+.sudoku-card-image img {
+  object-fit: cover;
+  transition: transform 800ms var(--ease);
+}
+
+.sudoku-visual:hover .sudoku-card-image img {
+  transform: scale(1.04);
+}
+
+/* ---------------------------------------------------------
+   Book Content
+   --------------------------------------------------------- */
+
+.sudoku-card-content {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 28px;
+
+  color: var(--white);
+}
+
+.sudoku-card-content > span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.sudoku-card-content h3 {
+  margin: auto 0 0;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+}
+
+.sudoku-card-content p {
+  max-width: 220px;
+  margin: 15px 0 0;
+
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------
+   Stamp
+   --------------------------------------------------------- */
+
+.sudoku-stamp {
+  position: absolute;
+  z-index: 3;
+  right: 5%;
+  bottom: 13%;
+
+  width: 105px;
+  height: 105px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  border: 1px solid var(--rose-dark);
+  border-radius: 50%;
+
+  background: rgba(248, 221, 227, 0.92);
+
+  color: var(--rose-dark);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.46rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-align: center;
+
+  transform: rotate(10deg);
+
+  transition: transform 400ms ease;
+}
+
+.sudoku-stamp strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  letter-spacing: 0;
+}
+
+.sudoku-visual:hover .sudoku-stamp {
+  transform: rotate(4deg) scale(1.05);
+}
+
+/* ---------------------------------------------------------
+   Copy
+   --------------------------------------------------------- */
+
+.sudoku-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 620px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.sudoku-heading-row .eyebrow {
+  margin: 0;
+}
+
+.sudoku-label {
+  color: var(--rose-dark);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.sudoku-copy h2 {
+  margin: 35px 0 0;
+
+  font-size: clamp(4rem, 6.5vw, 6.8rem);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+.sudoku-copy h2 em {
+  color: var(--rose);
+  font-style: italic;
+}
+
+.sudoku-description {
+  max-width: 500px;
+
+  margin: 35px 0 0;
+
+  color: var(--muted);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+/* ---------------------------------------------------------
+   Product Details
+   --------------------------------------------------------- */
+
+.sudoku-details {
+  max-width: 620px;
+
+  margin-top: 42px;
+
+  border-top: 1px solid var(--border);
+}
+
+.sudoku-detail {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+
+  padding-block: 14px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.sudoku-detail span {
+  color: var(--rose);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.sudoku-detail p {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------
+   Price
+   --------------------------------------------------------- */
+
+.sudoku-price {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+
+  margin-top: 28px;
+}
+
+.sudoku-price span {
+  color: var(--muted);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sudoku-price strong {
+  color: var(--rose-dark);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+/* ---------------------------------------------------------
+   Button
+   --------------------------------------------------------- */
+
+.sudoku-button {
+  margin-top: 28px;
+
+  border-color: var(--rose-deep);
+  background: var(--rose-deep);
+  color: var(--white);
+}
+
+.sudoku-button:hover {
+  border-color: var(--rose);
+  background: var(--rose);
+  color: var(--white);
+}
+
+/* =========================================================
+   Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .sudoku-section {
+    padding-block: 100px;
+  }
+
+  .sudoku-layout {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .sudoku-copy {
+    max-width: 700px;
+  }
+
+  .sudoku-visual {
+    min-height: 600px;
+    order: 2;
+  }
+}
+
+/* =========================================================
+   Mobile
+   ========================================================= */
+
+@media (max-width: 550px) {
+  .sudoku-section {
+    padding-block: 75px;
+  }
+
+  .sudoku-heading-row {
+    align-items: flex-start;
+  }
+
+  .sudoku-label {
+    display: none;
+  }
+
+  .sudoku-copy h2 {
+    font-size: clamp(3.5rem, 16vw, 5rem);
+  }
+
+  .sudoku-description {
+    font-size: 0.82rem;
+  }
+
+  .sudoku-visual {
+    min-height: 470px;
+  }
+
+  .sudoku-card,
+  .sudoku-card-back {
+    width: 70%;
+  }
+
+  .sudoku-stamp {
+    right: 0;
+
+    width: 85px;
+    height: 85px;
+
+    font-size: 0.4rem;
+  }
+
+  .sudoku-stamp strong {
+    font-size: 0.95rem;
+  }
+
+  .sudoku-card-content {
+    padding: 20px;
+  }
+
+  .sudoku-card-content h3 {
+    font-size: 3rem;
+  }
+}
+
+/* =========================================================
    Magazine Club
+   Coming Soon
    ========================================================= */
 
 .club-section {
   position: relative;
-
   padding-block: 150px;
-
   background: var(--rose-light);
   color: var(--rose-deep);
-
   overflow: hidden;
 }
 
 .club-section::before {
   content: "";
-
   position: absolute;
-
   width: 700px;
   height: 700px;
-
   top: -350px;
   right: -250px;
-
   border-radius: 50%;
-
   background: rgba(255, 255, 255, 0.35);
-
   pointer-events: none;
 }
 
 .club-layout {
   position: relative;
-
   display: grid;
   grid-template-columns: 1fr 0.8fr;
-
   gap: 100px;
-
   align-items: center;
 }
 
@@ -1596,14 +2092,10 @@ img {
 
 .club-heading-row {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
-
   max-width: 620px;
-
   padding-bottom: 18px;
-
   border-bottom: 1px solid rgba(94, 25, 49, 0.18);
 }
 
@@ -1613,73 +2105,55 @@ img {
 
 .club-member-number {
   color: var(--rose-dark);
-
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.55rem;
   font-weight: 700;
   letter-spacing: 0.13em;
-
   text-transform: uppercase;
 }
 
 .club-copy h2 {
   margin: 35px 0 0;
-
   font-size: clamp(4rem, 6.5vw, 6.8rem);
   font-weight: 400;
-
   line-height: 0.88;
-
   letter-spacing: -0.055em;
 }
 
 .club-copy h2 em {
   color: var(--rose);
-
   font-style: italic;
 }
 
 .club-description {
   max-width: 470px;
-
   margin: 35px 0 0;
-
   color: rgba(94, 25, 49, 0.72);
-
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.9rem;
   line-height: 1.85;
 }
 
 /* ---------------------------------------------------------
-   Benefits
+   Benefits / Future Features
    --------------------------------------------------------- */
 
 .club-benefits {
   max-width: 620px;
-
   margin-top: 45px;
-
   border-top: 1px solid rgba(94, 25, 49, 0.18);
 }
 
 .club-benefit {
   display: grid;
-
   grid-template-columns: 45px 1fr;
-
   padding-block: 15px;
-
   border-bottom: 1px solid rgba(94, 25, 49, 0.18);
 }
 
 .club-benefit span {
   color: var(--rose);
-
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1687,29 +2161,27 @@ img {
 
 .club-benefit p {
   margin: 0;
-
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-
   text-transform: uppercase;
 }
 
+/* ---------------------------------------------------------
+   Coming Soon Button
+   --------------------------------------------------------- */
+
 .club-button {
   margin-top: 35px;
-
   border-color: var(--rose-deep);
   background: var(--rose-deep);
-
   color: var(--white);
 }
 
 .club-button:hover {
   border-color: var(--rose);
   background: var(--rose);
-
   color: var(--white);
 }
 
@@ -1719,41 +2191,33 @@ img {
 
 .club-visual {
   position: relative;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   min-height: 650px;
 }
 
+/* ---------------------------------------------------------
+   Back Card
+   --------------------------------------------------------- */
+
 .club-card-back {
   position: absolute;
-
   width: 65%;
   aspect-ratio: 0.7;
-
   background: #d9b3bd;
-
   transform: translate(45px, -25px) rotate(8deg);
-
   box-shadow: 15px 20px 50px rgba(94, 25, 49, 0.12);
 }
 
 .club-card-back span {
   display: block;
-
   margin-left: 25px;
-
   color: rgba(94, 25, 49, 0.4);
-
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.5rem;
   font-weight: 700;
   letter-spacing: 0.2em;
-
   text-transform: uppercase;
 }
 
@@ -1762,17 +2226,14 @@ img {
 }
 
 /* ---------------------------------------------------------
-   Main magazine
+   Main Magazine Preview
    --------------------------------------------------------- */
 
 .club-card {
   position: relative;
   z-index: 2;
-
   width: 65%;
-
   aspect-ratio: 0.7;
-
   background: var(--paper);
 
   box-shadow: 25px 30px 70px rgba(94, 25, 49, 0.2);
@@ -1786,34 +2247,33 @@ img {
 
 .club-visual:hover .club-card {
   transform: rotate(0deg) translateY(-8px);
-
   box-shadow: 25px 40px 80px rgba(94, 25, 49, 0.25);
 }
 
+/* ---------------------------------------------------------
+   Magazine Image
+   --------------------------------------------------------- */
+
 .club-card-image {
   position: absolute;
-
   inset: 0;
-
   overflow: hidden;
 }
 
 .club-card-image::after {
   content: "";
-
   position: absolute;
   inset: 0;
 
   background: linear-gradient(
     180deg,
     rgba(94, 25, 49, 0.1),
-    rgba(94, 25, 49, 0.65)
+    rgba(94, 25, 49, 0.68)
   );
 }
 
 .club-card-image img {
   object-fit: cover;
-
   transition: transform 800ms var(--ease);
 }
 
@@ -1821,16 +2281,17 @@ img {
   transform: scale(1.04);
 }
 
+/* ---------------------------------------------------------
+   Magazine Content
+   --------------------------------------------------------- */
+
 .club-card-content {
   position: absolute;
   z-index: 2;
-
   inset: 0;
 
   display: flex;
-
   flex-direction: column;
-
   justify-content: space-between;
 
   padding: 30px;
@@ -1840,7 +2301,6 @@ img {
 
 .club-card-content > span {
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.55rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -1848,32 +2308,26 @@ img {
 
 .club-card-content h3 {
   margin: auto 0 0;
-
   font-size: clamp(3rem, 5vw, 5rem);
   font-weight: 400;
-
   line-height: 0.85;
-
   letter-spacing: -0.04em;
 }
 
 .club-card-content p {
+  max-width: 220px;
   margin: 15px 0 0;
-
   font-size: 0.8rem;
-
   font-style: italic;
 }
 
 /* ---------------------------------------------------------
-   Stamp
+   Coming Soon Stamp
    --------------------------------------------------------- */
 
 .club-stamp {
   position: absolute;
-
   z-index: 3;
-
   right: 2%;
   bottom: 14%;
 
@@ -1881,16 +2335,13 @@ img {
   height: 110px;
 
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
 
   gap: 3px;
 
   border: 1px solid var(--rose-dark);
-
   border-radius: 50%;
 
   background: rgba(248, 221, 227, 0.9);
@@ -1898,35 +2349,33 @@ img {
   color: var(--rose-dark);
 
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 0.48rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-
   text-align: center;
 
   transform: rotate(12deg);
 
-  transition: transform 400ms ease;
+  transition:
+    transform 400ms ease,
+    background 400ms ease;
 }
 
 .club-stamp strong {
   font-family: Georgia, "Times New Roman", serif;
-
   font-size: 1.15rem;
-
   letter-spacing: 0;
-
   text-transform: none;
 }
 
 .club-visual:hover .club-stamp {
   transform: rotate(4deg) scale(1.05);
+  background: rgba(248, 221, 227, 1);
 }
 
-/* ---------------------------------------------------------
+/* =========================================================
    Tablet
-   --------------------------------------------------------- */
+   ========================================================= */
 
 @media (max-width: 900px) {
   .club-section {
@@ -1935,7 +2384,6 @@ img {
 
   .club-layout {
     grid-template-columns: 1fr;
-
     gap: 70px;
   }
 
@@ -1948,9 +2396,9 @@ img {
   }
 }
 
-/* ---------------------------------------------------------
+/* =========================================================
    Mobile
-   --------------------------------------------------------- */
+   ========================================================= */
 
 @media (max-width: 550px) {
   .club-section {
@@ -1969,6 +2417,10 @@ img {
     font-size: clamp(3.5rem, 16vw, 5rem);
   }
 
+  .club-description {
+    font-size: 0.82rem;
+  }
+
   .club-visual {
     min-height: 470px;
   }
@@ -1980,9 +2432,13 @@ img {
 
   .club-stamp {
     right: 0;
-
     width: 85px;
     height: 85px;
+    font-size: 0.4rem;
+  }
+
+  .club-stamp strong {
+    font-size: 0.95rem;
   }
 
   .club-card-content {

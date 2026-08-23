@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { coloringBooks } from "../data/coloringBooks";
-import TemplateCard from "../components/TemplateCard";
+import ColoringBookCard from "../components/ColoringBookCard";
 
 export default function ColoringBooks() {
   return (
-    <section className="templates-section" id="coloring-books">
+    <section className="coloring-books-section" id="coloring-books">
       <div className="container">
-        <div className="templates-header">
+        <div className="coloring-books-header">
           <div>
             <p className="eyebrow">Coloring Books</p>
 
@@ -17,7 +17,7 @@ export default function ColoringBooks() {
             </h2>
           </div>
 
-          <div className="templates-intro">
+          <div className="coloring-books-intro">
             <p>
               Explore beautifully designed coloring books made for creativity,
               quiet moments, and bringing every page to life.
@@ -25,23 +25,23 @@ export default function ColoringBooks() {
 
             <Link href="#contact" className="text-link">
               Looking for something custom
-              <span>↗</span>
+              <span aria-hidden="true">↗</span>
             </Link>
           </div>
         </div>
 
-        <div className="templates-grid">
+        <div className="coloring-books-grid">
           {coloringBooks.map((book) => (
-            <TemplateCard key={book.id} template={book} />
+            <ColoringBookCard key={book.id} book={book} />
           ))}
         </div>
 
-        <div className="templates-footer">
+        <div className="coloring-books-footer">
           <span>05 coloring books</span>
 
-          <Link href="#contact" className="templates-view-all">
+          <Link href="#contact" className="coloring-books-view-all">
             Explore all books
-            <span>→</span>
+            <span aria-hidden="true">→</span>
           </Link>
 
           <span>Pick your favorite</span>

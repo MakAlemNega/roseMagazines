@@ -13,6 +13,7 @@ export default function MagazineCard({ magazine }) {
 
         <div className="magazine-card-overlay">
           <span>View magazine</span>
+          <span aria-hidden="true">↗</span>
         </div>
       </div>
 
@@ -23,8 +24,10 @@ export default function MagazineCard({ magazine }) {
           <h3>{magazine.title}</h3>
         </div>
 
-        <span className="magazine-card-price">{magazine.price}</span>
+        <span className="magazine-card-number">0{magazine.id}</span>
       </div>
+
+      <p className="magazine-card-description">{magazine.description}</p>
     </article>
   );
 }

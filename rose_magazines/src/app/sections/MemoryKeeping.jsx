@@ -17,23 +17,26 @@ export default function MemoryKeeping() {
           </div>
 
           <p className="section-description">
-            Beautifully designed magazines created to turn ordinary moments into
-            something you'll want to revisit for years to come.
+            Thoughtfully designed magazines that turn birthdays, friendships,
+            journeys, and life's most meaningful moments into keepsakes worth
+            returning to.
           </p>
         </div>
 
-        <div className="magazine-grid">
+        <div className="magazine-grid" aria-label="Magazine collections">
           {magazines.map((magazine) => (
             <MagazineCard key={magazine.id} magazine={magazine} />
           ))}
         </div>
 
         <div className="memory-section-footer">
-          <p>A little piece of your story, printed on paper.</p>
+          <p>
+            Your memories deserve more than a moment. Give them a place to stay.
+          </p>
 
           <a href="#custom" className="text-link">
             Create something personal
-            <span>↗</span>
+            <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>

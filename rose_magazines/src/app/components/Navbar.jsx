@@ -12,14 +12,19 @@ export default function Navbar() {
 
         {/* Navigation */}
         <nav className="navbar-links" aria-label="Main Navigation">
-          <Link href="#collections">Collections</Link>
+          <Link href="#collections">Magazines</Link>
+
+          <Link href="#coloring-books">Coloring Books</Link>
+
+          <Link href="#sudoku">Sudoku</Link>
+
           <Link href="#custom">Custom Magazines</Link>
+
           <Link href="#club">Magazine Club</Link>
-          <Link href="#about">About</Link>
         </nav>
 
         {/* CTA */}
-        <Link href="#contact" className="navbar-action">
+        <Link href="#contacts" className="navbar-action">
           Get in touch
         </Link>
       </div>
