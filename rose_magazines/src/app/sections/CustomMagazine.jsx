@@ -5,30 +5,36 @@ export default function CustomMagazine() {
   return (
     <section className="custom-section" id="custom">
       <div className="container custom-layout">
+        {/* Visual */}
         <div className="custom-visual">
-          <a
-            href="https://vt.tiktok.com/ZSVQFVDgw/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="custom-image-main custom-video-link"
-            aria-label="Watch the original video on TikTok"
-          >
-            <video
-              className="custom-magazine-video"
-              src="/videos/Custom_Mag_Big01.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            />
+          {/* Main Video */}
+          <div className="custom-image-main">
+            <Link
+              href="https://vt.tiktok.com/ZSVQFVDgw/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="custom-video-link"
+              aria-label="Watch the original magazine video on TikTok"
+            >
+              <video
+                className="custom-magazine-video"
+                src="/videos/Custom_Mag_Big01.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label="Custom magazine preview"
+              />
 
-            <div className="custom-video-overlay">
-              <span>Watch on TikTok</span>
-              <span aria-hidden="true">↗</span>
-            </div>
-          </a>
+              <div className="custom-video-overlay">
+                <span>Watch on TikTok</span>
+                <span aria-hidden="true">↗</span>
+              </div>
+            </Link>
+          </div>
 
+          {/* Small Image */}
           <div className="custom-image-small">
             <Image
               src="/images/customMagazines/Custom_Mag_Small02.avif"
@@ -38,6 +44,7 @@ export default function CustomMagazine() {
             />
           </div>
 
+          {/* Stamp */}
           <div className="custom-stamp">
             <span>Made</span>
             <span>For</span>
@@ -45,6 +52,7 @@ export default function CustomMagazine() {
           </div>
         </div>
 
+        {/* Content */}
         <div className="custom-copy">
           <p className="eyebrow">Your story, your way</p>
 
@@ -60,6 +68,7 @@ export default function CustomMagazine() {
             turn them into a magazine that feels completely yours.
           </p>
 
+          {/* Features */}
           <div className="custom-features">
             <div>
               <span>01</span>
@@ -77,7 +86,8 @@ export default function CustomMagazine() {
             </div>
           </div>
 
-          <Link href="#contact" className="button custom-button">
+          {/* CTA */}
+          <Link href="#contacts" className="button custom-button">
             Start your magazine
           </Link>
         </div>
