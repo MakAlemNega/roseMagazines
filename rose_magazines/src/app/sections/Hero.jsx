@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="container hero-content">
         <div className="hero-topline">
           <span>Rose Magazines</span>
-          <span>Est. 2026</span>
+          <span>Est. 2025</span>
         </div>
 
         <div className="hero-copy">

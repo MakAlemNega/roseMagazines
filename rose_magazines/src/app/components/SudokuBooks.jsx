@@ -14,7 +14,7 @@ export default function SudokuBooks() {
           <div className="sudoku-card">
             <div className="sudoku-card-image">
               <Image
-                src="/images/sudoku/Sudoku_Book.avif"
+                src="/images/sudoku/sudokuBook.avif"
                 alt="Rose Magazines Sudoku book"
                 fill
                 sizes="(max-width: 900px) 70vw, 420px"
@@ -88,7 +88,7 @@ export default function SudokuBooks() {
             <strong>350 Birr</strong>
           </div>
 
-          <Link href="#contact" className="button sudoku-button">
+          <Link href="#contacts" className="button sudoku-button">
             Get your Sudoku book
           </Link>
         </div>

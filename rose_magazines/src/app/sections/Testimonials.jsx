@@ -23,43 +23,33 @@ export default function Testimonials() {
   return (
     <section className="testimonials-section">
       <div className="container">
-
         <div className="testimonials-top">
           <p className="eyebrow">Words worth keeping</p>
 
-          <span className="testimonials-count">
-            03 / 03
-          </span>
+          <span className="testimonials-count">03 / 03</span>
         </div>
 
         <div className="testimonial-feature">
           <span className="quote-mark">“</span>
 
           <blockquote>
-            Rose turned a collection of little moments
-            into something we can actually hold onto.
-            <em> It feels incredibly personal.</em>
+            Words cannot express how amazing this magazine is—I could write a
+            whole book! You are truly gifted and brought my dream to life.
+            <em>We will cherish this forever.</em>
           </blockquote>
 
           <div className="testimonial-author">
-            <span>Sarah M.</span>
+            <span>Bitaniya.</span>
             <span>Custom Magazine</span>
           </div>
         </div>
 
         <div className="testimonial-grid">
           {testimonials.map((testimonial, index) => (
-            <article
-              className="testimonial-card"
-              key={testimonial.name}
-            >
-              <span className="testimonial-number">
-                0{index + 1}
-              </span>
+            <article className="testimonial-card" key={testimonial.name}>
+              <span className="testimonial-number">0{index + 1}</span>
 
-              <p className="testimonial-quote">
-                "{testimonial.quote}"
-              </p>
+              <p className="testimonial-quote">"{testimonial.quote}"</p>
 
               <div className="testimonial-meta">
                 <strong>{testimonial.name}</strong>
@@ -68,7 +58,6 @@ export default function Testimonials() {
             </article>
           ))}
         </div>
-
       </div>
     </section>
   );

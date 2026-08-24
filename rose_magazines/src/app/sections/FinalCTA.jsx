@@ -35,7 +35,7 @@ export default function FinalCTA() {
       <div className="final-cta-bottom">
         <span>ROSE MAGAZINES</span>
         <span>MADE TO BE KEPT</span>
-        <span>EST. 2026</span>
+        <span>EST. 2025</span>
       </div>
     </section>
   );
