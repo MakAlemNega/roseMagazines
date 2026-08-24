@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
   reactCompiler: true,
+  allowedDevOrigins: [
+    "192.168.11.1",
+    "localhost:3000",
+    "evaluation-metro-andrea-apartments.trycloudflare.com",
+  ],
   images: {
     remotePatterns: [
       {

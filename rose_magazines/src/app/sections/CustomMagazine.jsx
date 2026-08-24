@@ -67,7 +67,7 @@ export default function CustomMagazine() {
             </div>
           </div>
 
-          <Link href="#contact" className="button custom-button">
+          <Link href="#contacts" className="button custom-button">
             Start your magazine
           </Link>
         </div>

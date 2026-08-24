@@ -71,7 +71,7 @@ export default function Newsletter() {
           <div className="newsletter-stamp">
             <span>COMING</span>
             <strong>SOON</strong>
-            <span>EST. 2026</span>
+            <span>EST. 2025</span>
           </div>
         </div>
       </div>

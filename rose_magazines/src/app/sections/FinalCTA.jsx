@@ -22,11 +22,11 @@ export default function FinalCTA() {
         </p>
 
         <div className="final-cta-actions">
-          <Link href="#contact" className="button final-cta-primary">
+          <Link href="#contacts" className="button final-cta-primary">
             Create your magazine
           </Link>
 
-          <Link href="#templates" className="button final-cta-secondary">
+          <Link href="#collections" className="button final-cta-secondary">
             Explore templates
           </Link>
         </div>
