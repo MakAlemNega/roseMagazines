@@ -6,7 +6,13 @@ export default function CustomMagazine() {
     <section className="custom-section" id="custom">
       <div className="container custom-layout">
         <div className="custom-visual">
-          <div className="custom-image-main">
+          <a
+            href="https://vt.tiktok.com/ZSVQFVDgw/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="custom-image-main custom-video-link"
+            aria-label="Watch the original video on TikTok"
+          >
             <video
               className="custom-magazine-video"
               src="/videos/Custom_Mag_Big01.mp4"
@@ -15,9 +21,13 @@ export default function CustomMagazine() {
               loop
               playsInline
               preload="metadata"
-              aria-label="Custom magazine preview"
             />
-          </div>
+
+            <div className="custom-video-overlay">
+              <span>Watch on TikTok</span>
+              <span aria-hidden="true">↗</span>
+            </div>
+          </a>
 
           <div className="custom-image-small">
             <Image
@@ -67,7 +77,7 @@ export default function CustomMagazine() {
             </div>
           </div>
 
-          <Link href="#contacts" className="button custom-button">
+          <Link href="#contact" className="button custom-button">
             Start your magazine
           </Link>
         </div>
