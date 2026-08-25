@@ -12,8 +12,8 @@ export default function ColoringBookCard({ book }) {
         />
 
         <div className="coloring-book-overlay">
-          <span>Explore this book</span>
-          <span aria-hidden="true">↗</span>
+          {/* <span>Explore this book</span>
+          <span aria-hidden="true">↗</span> */}
         </div>
 
         <span className="coloring-book-issue">{book.issue}</span>

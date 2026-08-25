@@ -12,8 +12,8 @@ export default function MagazineCard({ magazine }) {
         />
 
         <div className="magazine-card-overlay">
-          <span>View magazine</span>
-          <span aria-hidden="true">↗</span>
+          {/* <span>View magazine</span>
+          <span aria-hidden="true">↗</span> */}
         </div>
       </div>
 

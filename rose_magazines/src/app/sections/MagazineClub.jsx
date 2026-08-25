@@ -43,7 +43,7 @@ export default function MagazineClub() {
             </div>
           </div>
 
-          <Link href="#contact" className="button club-button">
+          <Link href="#contacts" className="button club-button">
             Stay Tuned
           </Link>
         </div>

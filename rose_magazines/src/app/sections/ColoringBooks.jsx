@@ -23,7 +23,7 @@ export default function ColoringBooks() {
               quiet moments, and bringing every page to life.
             </p>
 
-            <Link href="#contact" className="text-link">
+            <Link href="#contacts" className="text-link">
               Looking for something custom
               <span aria-hidden="true">↗</span>
             </Link>
@@ -39,7 +39,7 @@ export default function ColoringBooks() {
         <div className="coloring-books-footer">
           <span>05 coloring books</span>
 
-          <Link href="#contact" className="coloring-books-view-all">
+          <Link href="#contacts" className="coloring-books-view-all">
             Explore all books
             <span aria-hidden="true">→</span>
           </Link>
